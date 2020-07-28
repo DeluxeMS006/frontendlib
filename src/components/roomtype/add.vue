@@ -31,9 +31,6 @@
 				  	<a href="tolist.do" class="btn btn-primary">取消</a>
 				</form>
 	        </div>
-	        <!-- /.box-body -->
-		    	
-	        <!-- /.box-footer-->
 	      </div>
 	      <!-- /.box -->
 </template>

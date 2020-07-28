@@ -24,22 +24,22 @@
 					    </tr>
 					  </thead>
 					  <tbody>
-					  <c:forEach items="${RoomTypeList}" var="dm">
 					    <tr>
 					      <td align="center"></td>
 					      <td align="center"></td>
 					      <td align="center"></td>
+						  <td align="center"></td>
 					      <td align="center">
 					      	<a href="tomodify.mvc" class="btn btn-info">修改</a>		
 					      	<a href="todelete.mvc" class="btn btn-danger">删除</a>		
 					      	<a href="toview.mvc" class="btn btn-primary">查看</a>
 					      </td>
 					    </tr>
-					   </c:forEach>
 					  </tbody>
 				</table>
 				<a href="toadd.do" class="btn btn-primary btn-lg" style="text-align:center">增加房型</a>
 	        </div>
+		  </div>
 </template>
 
 <script>
