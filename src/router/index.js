@@ -7,11 +7,14 @@ import EmployeeMain from "./../components/employee/main.vue";
 import RoomMain from "./../components/room/main.vue";
 import TransactionMain from "./../components/transaction/main.vue";
 import CustomerMain from "./../components/customer/main.vue";
+import AdminLogin from "./../components/admin/login.vue";
 
 Vue.use(VueRouter)
 
 const routes = [
+	
 	{path:"/",name:"homemain",component:HomeMain},
+	{path:"/admin",name:"login",component:AdminLogin},
 	{path:"/roomtype",name:"roomtypemain",component:RoomTypeMain},
 	{path:"/employee",name:"employeemain",component:EmployeeMain},
 	{path:"/room",name:"roommain",component:RoomMain},

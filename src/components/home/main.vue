@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>欢饮使用DELUXE MS</h1>
+		<h1>欢迎使用DELUXE MS</h1>
 	</div>
 </template>
 

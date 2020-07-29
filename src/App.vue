@@ -15,7 +15,7 @@
           </div>
           <div class="pull-left info">
             <p>Admin</p>
-            <a href="#"><i class="fa fa-circle text-success"></i> Offline</a>
+            <router-link to="/admin"><i class="fa fa-circle text-success"></i> Sign in</router-link>
           </div>
         </div>
         <!-- search form -->
@@ -50,7 +50,7 @@
 		  </li>
 		  <li class="treeview">
 		    <router-link to="/customer">
-		      <i class="fa fa-dashboard"></i> <span>客户管理</span>
+		      <i class="fa fa-dashboard"></i> <span>顾客管理</span>
 		      <span class="pull-right-container">
 		        <i class="fa fa-angle-left pull-right"></i>
 		      </span>

@@ -18,7 +18,7 @@
 					    <tr>
 					      <th scope="col" style="text-align:center"><h4><b>房间型号</b></h4></th>
 					      <th scope="col" style="text-align:center"><h4><b>房间内部设施</b></h4></th>
-					      <th scope="col" style="text-align:center"><h4><b>房间楼层</b></h4></th>
+					      <th scope="col" style="text-align:center"><h4><b>所在楼层</b></h4></th>
 					      <th scope="col" style="text-align:center"><h4><b>价格</b></h4></th>
 						  <th scope="col" style="text-align:center"><h4><b>操作</b></h4></th>
 					    </tr>
