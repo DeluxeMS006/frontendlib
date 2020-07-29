@@ -43,10 +43,34 @@
 </template>
 
 <script>
+	import axios from "axios";
 	export default{
 		name:"RoomTypeMain",
 		data(){
-			return{};
+			return{
+				roomtypeList:[],
+				page:1,
+				rows:10,
+				count:0,
+				pageCount:0
+			};
+		},
+		created() {
+			this.getList();
+		},
+		methods:{
+			getList(){
+				axios.get("http://localhost:8080/roomtype/main/all/page",{
+					params:{
+						rows:this.rows,
+						page:this.page,
+					}
+				}).then(result=>{
+					this.roomtypeList=result.data.list;
+					this.count=result.data.count;
+					this.pageCount=result.data.pageCount;
+				});
+			}
 		}
 	}
 </script>
