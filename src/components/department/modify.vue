@@ -3,7 +3,7 @@
 
 <script>
 	export default{
-		name:"TransactionAdd",
+		name:"DepartmentModify",
 		data(){
 			return{};
 		}

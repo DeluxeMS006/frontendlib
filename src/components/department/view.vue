@@ -3,7 +3,7 @@
 
 <script>
 	export default{
-		name:"TransactionDelete",
+		name:"DepartmentView",
 		data(){
 			return{};
 		}

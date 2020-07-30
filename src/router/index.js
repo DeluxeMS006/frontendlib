@@ -6,7 +6,7 @@ import HomeMain from "./../components/home/main.vue";
 import RoomTypeMain from "./../components/roomtype/main.vue";
 import EmployeeMain from "./../components/employee/main.vue";
 import RoomMain from "./../components/room/main.vue";
-import TransactionMain from "./../components/transaction/main.vue";
+import DepartmentMain from "./../components/department/main.vue";
 import CustomerMain from "./../components/customer/main.vue";
 
 
@@ -19,7 +19,7 @@ const routes = [
 	{path:"/roomtype",name:"roomtypemain",component:RoomTypeMain},
 	{path:"/employee",name:"employeemain",component:EmployeeMain},
 	{path:"/room",name:"roommain",component:RoomMain},
-	{path:"/transaction",name:"transactionmain",component:TransactionMain},
+	{path:"/department",name:"departmentmain",component:DepartmentMain},
 	{path:"/customer",name:"customermain",component:CustomerMain}
 ]
 
