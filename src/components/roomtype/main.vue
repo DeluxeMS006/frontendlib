@@ -66,7 +66,7 @@
 						page:this.page,
 					}
 				}).then(result=>{
-					this.roomtypeList=result.data.list;
+					this.departmentList=result.data.list;
 					this.count=result.data.count;
 					this.pageCount=result.data.pageCount;
 				});

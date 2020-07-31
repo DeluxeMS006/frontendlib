@@ -5,9 +5,13 @@
 </template>
 
 <script>
-	//import axios from "axios";
-	export default {
-		name:"HomeMain"
+export default {
+		name:"HomeMain",
+		created(){
+			this.$parent.mainTitle="系统主页";
+			this.$parent.subTitle="欢迎界面";
+		}
+		
 	}
 </script>
 

@@ -33,8 +33,11 @@
             <img src="./assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>Admin</p>
-            <router-link to="/admin"><i class="fa fa-circle text-success"></i> Sign in</router-link>
+			  <p v-if="loginuser!=null">{{loginuser.name}}</p>
+			 <p v-else>未登录</p>
+			 <router-link v-if="loginuser==null" to="/login"><i class="fa fa-circle text-success"></i>Sign in</router-link>
+			 <router-link v-else to="/login"><i class="fa fa-circle text-success"></i>Sign out</router-link> 
+
           </div>
         </div>
         <!-- search form -->
@@ -49,7 +52,7 @@
         </form>
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" data-widget="tree">
+        <ul v-if="loginuser!=null" class="sidebar-menu" data-widget="tree">
           <li class="header">系统功能选择</li>
           <li class="treeview">
             <router-link to="/roomtype">
@@ -76,8 +79,8 @@
 		    </router-link>
 		  </li>
 		  <li class="treeview">
-		    <router-link to="/transaction">
-		      <i class="fa fa-dashboard"></i> <span>事务管理</span>
+		    <router-link to="/department">
+		      <i class="fa fa-dashboard"></i> <span>部门管理</span>
 		      <span class="pull-right-container">
 		        <i class="fa fa-angle-left pull-right"></i>
 		      </span>
@@ -103,10 +106,10 @@
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
-        <h1>
-          欢迎管理员
-          <small>子功能</small>
-        </h1>
+		   <h1>
+			{{mainTitle}}
+			 <small><b>{{subTitle}}</b></small>
+		   </h1>
         <ol class="breadcrumb">
           <li><router-link to="/home"><i class="fa fa-dashboard"></i> Home</router-link></li>
           <li><a href="#"></a></li>
@@ -146,6 +149,23 @@
     <div class="control-sidebar-bg"></div>
   </div>
 </template>
+<script>
+	//员工增加组件
+	export default {
+		name:"App",
+		data(){
+			return {
+				mainTitle:"系统主页",
+				subTitle:"欢迎界面"
+			};
+		},
+		computed:{
+			loginuser(){
+				return this.$store.getters.loginuser;
+			}
+		}
+	}
+</script>
 
 <style>
 @import url("assets/bower_components/bootstrap/dist/css/bootstrap.min.css");
