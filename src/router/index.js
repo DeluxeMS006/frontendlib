@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import store from './../store/index'
+import store from './../store/index';
 
 import AdminLogin from "./../components/admin/login.vue";
-import HomeMain from "./../components/home/main.vue"
+import HomeMain from "./../components/home/main.vue";
 
 import DepartmentMain from "./../components/department/main.vue";
 import RoomTypeMain from "./../components/roomtype/main.vue";

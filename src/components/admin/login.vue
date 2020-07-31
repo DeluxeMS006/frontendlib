@@ -42,6 +42,7 @@
 </template>
 
 <script>
+		import axiosJSON from 'axios'
 export default {
 		name:"AdminLogin",
 		data(){
@@ -57,7 +58,7 @@ export default {
 		methods:{
 			userlogin(){  //管理员登录处理
 				//验证账号和密码是否合法
-				this.axiosJSON.get("/user/validate/"+this.userid+"/"+this.password).then(result=>{
+					axiosJSON.get("http://localhost:8200/user/validate/"+this.userid+"/"+this.password).then(result=>{
 					if(result.data.stringResult=="Y"){
 						//存储登录用户的对象 到Vuex的store中
 						this.$store.dispatch("loginUser",result.data.result);

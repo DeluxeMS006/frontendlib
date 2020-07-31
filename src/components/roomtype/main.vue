@@ -60,7 +60,7 @@
 		},
 		methods:{
 			getList(){
-				axios.get("http://localhost:8081/roomtype/main/all/page",{
+				axios.get("http://localhost:8200/roomtype/main/all/page",{
 					params:{
 						rows:this.rows,
 						page:this.page,
