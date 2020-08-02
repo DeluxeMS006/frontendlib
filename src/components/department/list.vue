@@ -47,7 +47,7 @@
 </template>
 
 <script>
-	import axiosJSON from "axios";
+	import axios from "axios";
 	export default {
 		name:"DepartmentList",
 		data(){
@@ -65,7 +65,7 @@
 		},
 		methods:{
 			getList(){
-				axiosJSON.get("http://localhost:8200/department/list/all/page",{
+				axios.get("http://localhost:8200/department/list/all/page",{
 					params:{
 						rows:this.rows,
 						page:this.page
@@ -79,7 +79,7 @@
 			deleteDepartment(no){
 				let checkresult=confirm("您确认要删除此部门么");
 				if(checkresult){
-						axiosJSON.post("/department/delete",{no:no}).then(result=>{
+						axios.post("http://localhost:8200/department/delete",{no:no}).then(result=>{
 						alert(result.data.message);
 						if(result.data.status=="OK"){
 							this.getList();

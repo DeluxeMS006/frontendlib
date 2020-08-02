@@ -75,7 +75,7 @@
 </template>
 
 <script>
-	import axiosJSON from 'axios'
+	//import axiosJSON from 'axios'
 	//员工详细显示组件
 	import MainConfig from "./../../config/index.js";
 	
@@ -111,7 +111,7 @@
 		},
 		methods:{
 			getEmployee(){
-				axiosJSON.get("http://localhost:8200/employee/get/"+this.id).then(result=>{
+				this.axiosJSON.get("/employee/get/"+this.id).then(result=>{
 					if(result.data.status=="OK"){
 						this.employee=result.data.result;
 						if(this.employee.photoFileName!=null){

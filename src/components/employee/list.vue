@@ -86,7 +86,7 @@
 </template>
 
 <script>
-	import axiosJSON from 'axios'
+	import axios from 'axios'
 	//员工列表组件
 	export default {
 		name:"EmployeeList",
@@ -113,7 +113,7 @@
 		},
 		methods:{
 			getListByCondition(){
-				this.axiosJSON.get("/employee/list/condition/page",{
+				axios.get("http://localhost:8200/employee/list/condition/page",{
 					params:{
 						rows:this.rows,
 						page:this.page,
@@ -131,7 +131,7 @@
 				});
 			},
 			getDepartmentList(){
-				axiosJSON.get("http://localhost:8200/department/list/all").then(result=>{
+				axios.get("http://localhost:8200/department/list/all").then(result=>{
 					if(result.data.status=="OK"){
 						this.departmentList=result.data.list;
 					}

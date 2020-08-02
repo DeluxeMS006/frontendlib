@@ -26,7 +26,7 @@
 
 <script>
 	//部门增加组件
-	import axiosJSON from "axios";
+	//import axiosJSON from "axios";
 	export default {
 		name:"DepartmentAdd",
 		data(){
@@ -42,7 +42,7 @@
 		},
 		methods:{
 			add(){
-				axiosJSON.post("/department/add",this.department).then(result=>{
+				this.axiosJSON.post("http://localhost:8200/department/add",this.department).then(result=>{
 					if(result.data.status=="OK"){
 						alert(result.data.message);
 						this.$router.push("/department/list"); //编程方式跳转到部门列表组件
