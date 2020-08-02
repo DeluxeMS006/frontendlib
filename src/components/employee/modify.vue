@@ -75,6 +75,7 @@
 </template>
 
 <script>
+	import axios from "axios";
 	import MainConfig from "./../../config"; //引入全局参数配置
 	//员工修改组件
 	export default {
@@ -115,7 +116,7 @@
 		},
 		methods:{
 			getDepartmentLits(){ //取得所有部门列表
-				this.axiosJSON.get("/department/list/all").then(result=>{
+				axios.get("http://localhost:8200/department/list/all").then(result=>{
 					if(result.data.status=="OK"){
 						this.departmentList=result.data.list;
 					}
@@ -126,7 +127,7 @@
 				});
 			},
 			getBehaveList(){ //取得所有爱好列表
-				this.axiosJSON.get("/behave/list/all").then(result=>{
+				axios.get("http://localhost:8200/behave/list/all").then(result=>{
 					if(result.data.status=="OK"){
 						this.behaveList=result.data.list;
 					}
@@ -137,7 +138,7 @@
 				});
 			},
 			getEmployee(){ //取得修改的员工的对象
-				this.axiosJSON.get("/employee/get/"+this.id).then(result=>{
+				axios.get("http://localhost:8200/employee/get/"+this.id).then(result=>{
 					if(result.data.status=="OK"){
 						this.employee=result.data.result;
 						//取得员工现有的爱好

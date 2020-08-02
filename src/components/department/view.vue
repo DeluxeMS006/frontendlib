@@ -22,6 +22,7 @@
 </template>
 
 <script>
+	import axios from "axios";
 	//部门查看组件
 	export default {
 		name:"DepartmentView",
@@ -39,7 +40,7 @@
 		},
 		methods:{
 			getDepartment(){
-				this.axiosJSON.get("/department/get",{
+				axios.get("http://localhost:8200/department/get",{
 					params:{
 						no:this.no					
 					}

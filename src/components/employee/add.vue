@@ -76,6 +76,7 @@
 </template>
 
 <script>
+	import axios from "axios";
 	//员工增加组件
 	export default {
 		name:"EmployeeAdd",
@@ -106,7 +107,7 @@
 		},
 		methods:{
 			getDepartmentLits(){ //取得所有部门列表
-				this.axiosJSON.get("/department/list/all").then(result=>{
+				axios.get("http://localhost:8200/department/list/all").then(result=>{
 					if(result.data.status=="OK"){
 						this.departmentList=result.data.list;
 					}
@@ -117,7 +118,7 @@
 				});
 			},
 			getBehaveList(){ //取得所有爱好列表
-				this.axiosJSON.get("/behave/list/all").then(result=>{
+				axios.get("http://localhost:8200/behave/list/all").then(result=>{
 					if(result.data.status=="OK"){
 						this.behaveList=result.data.list;
 					}

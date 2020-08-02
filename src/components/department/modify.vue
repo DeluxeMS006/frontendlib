@@ -24,7 +24,7 @@
 </template>
 
 <script>
-	//import axios from "axios";
+	import axios from "axios";
 	//部门修改组件
 	export default {
 		name:"DepartmentModify",
@@ -45,12 +45,12 @@
 		methods:{
 			getDepartment(no){
 				
-				this.axiosJSON.get("/department/get?no="+no).then(result=>{
+				axios.get("http://localhost:8200/department/get?no="+no).then(result=>{
 					this.department=result.data.result;
 				});
 			},
 			modify(){
-				this.axiosJSON.post("/department/modify",this.department).then(result=>{
+				axios.post("http://localhost:8200/department/modify",this.department).then(result=>{
 					if(result.data.status=="OK"){
 						alert(result.data.message);
 						this.$router.push("/department/list"); //编程方式跳转到部门列表组件

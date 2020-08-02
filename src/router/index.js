@@ -31,7 +31,7 @@ import EmployeeView  from "./../components/employee/view.vue";
 Vue.use(VueRouter)
 
 const routes = [
-	{path:"/",name:"homemain",component:HomeMain},
+	{path:"/home",name:"homemain",component:HomeMain},
 	{path:"/login",name:"login",component:AdminLogin},
 	{path:"/department",name:"departmentmain", component:DepartmetnMain,children:[
 		{path:"list",name:"departmentlist",component:DepartmetnList},
